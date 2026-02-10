@@ -2,7 +2,7 @@
 
 ## Incident Overview
 
-This report documents a Tier-1 SOC investigation conducted following the detection of suspicious activity on a Windows endpoint monitored by Wazuh SIEM.
+This report documents a Tier-1 SOC investigation conducted following the detection of suspicious activity on a Windows endpoint monitored by SOAR platform.
 
 The incident involved abnormal PowerShell execution behavior and a registry-based persistence attempt, identified through endpoint telemetry and correlated SIEM alerts.
 
@@ -10,7 +10,7 @@ The incident involved abnormal PowerShell execution behavior and a registry-base
 
 ## Detection Summary
 
-- Detection Source: Wazuh SIEM
+- Detection Source: SOAR platform
 - Affected Host: Windows 10 Endpoint
 - Alert Types:
   - Suspicious PowerShell execution
