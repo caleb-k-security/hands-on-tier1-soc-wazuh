@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates hands-on Tier-1 Security Operations Center (SOC) activities using the Wazuh SIEM platform. 
+This project demonstrates hands-on Tier-1 Security Operations Center (SOC) activities using the a SOAR-enabled SOC platform. 
 It focuses on alert detection, investigation, evidence validation, and professional incident documentation in a controlled lab environment.
 
 The objective is to replicate real-world SOC workflows, emphasizing accuracy, escalation discipline, and evidence-based analysis.
@@ -19,8 +19,8 @@ This project aligns with Tier-1 SOC analyst responsibilities, including:
 
 ## Lab Environment
 
-- Wazuh Server (Manager, Indexer, Dashboard)
-- Windows 10 endpoint with Wazuh Agent and Sysmon
+- SOAR-enabled SOC platform for alert triage and response
+- Windows 10 endpoint with enhanced logging
 - Kali Linux (attack simulation)
 - Isolated virtualized environment (VirtualBox)
 
