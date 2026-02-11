@@ -2,39 +2,32 @@
 
 ## Incident Overview
 
-This report documents a Tier-1 SOC investigation conducted following the detection of suspicious activity on a Windows endpoint monitored by SOAR platform.
+This report documents the simulation and validation of automated SOC response workflows built within a SOAR platform.
 
-The incident involved abnormal PowerShell execution behavior and a registry-based persistence attempt, identified through endpoint telemetry and correlated SIEM alerts.
+Instead of investigating a single live incident, this project focused on building, testing, and validating automated response playbooks that activate following SIEM alert ingestion.
 
----
+Each workflow was tested using simulated high-severity alerts to ensure correct decision-making and controlled automated response.
 
-## Detection Summary
+## Automation Triggers
 
-- Detection Source: SOAR platform
-- Affected Host: Windows 10 Endpoint
-- Alert Types:
-  - Suspicious PowerShell execution
-  - Encoded command usage
-  - Registry modification for persistence
-- Severity Level: High
+The SOAR platform received simulated SIEM alerts via webhook integrations representing:
 
-Alerts were mapped to relevant MITRE ATT&CK techniques based on observed behavior.
+- Suspicious outbound IP activity
+- Multiple failed login attempts indicating possible account compromise
+- High-confidence phishing email indicators
 
----
+Each alert was processed through validation logic before any automated action occurred.
 
-## Investigation Actions
+## Workflow Validation Steps
 
-The following investigative steps were performed:
+The following validation steps were performed during testing:
 
-1. Reviewed SIEM alert metadata and timestamps
-2. Analyzed command-line execution details
-3. Validated process lineage and parent-child relationships
-4. Examined registry modification events
-5. Correlated multiple alerts to confirm incident scope
+1. Confirmed webhook ingestion of alert data
+2. Verified conditional logic execution
+3. Observed simulated containment actions
+4. Validated audit logging and SOC notification steps
+5. Ensured automation only triggered under high-risk conditions
 
-All findings were validated using endpoint telemetry rather than assumptions.
-
----
 
 ## MITRE ATT&CK Mapping
 
@@ -52,9 +45,9 @@ Based on the confirmed presence of encoded PowerShell execution and persistence-
 The incident was classified as a confirmed security event requiring further DFIR analysis.
 
 ---
-
 ## Conclusion
 
-This investigation demonstrates proper Tier-1 SOC procedures, including alert validation, evidence-based analysis, MITRE mapping, and disciplined escalation decision-making.
+This project demonstrates how SOC investigations can evolve into structured SOAR automation while maintaining oversight, logging, and risk validation.
 
-All actions were documented following professional SOC reporting standards.
+The workflows reflect real SOC automation practices where actions are controlled, auditable, and based on defined thresholds rather than blind execution.
+
